@@ -1,0 +1,14 @@
+{
+  "tools": {
+    "coming": "This tool is being prepared.",
+    "explore": "Meanwhile, you can read the latest reflection or browse articles."
+  },
+  "app": {
+    "title": "The Mounis app is coming soon",
+    "body": "A lightweight app for daily reading and tools is in preparation. It is not available yet."
+  },
+  "ads": {
+    "label": "Advertisement",
+    "placeholder": "Reserved ad space"
+  }
+}

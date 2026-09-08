@@ -1,0 +1,28 @@
+{
+  "article": {
+    "featuredKicker": "Reflection",
+    "reading": "min read",
+    "share": "Share",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "bookmark": "Save",
+    "print": "Print",
+    "previous": "Previous articles",
+    "viewMore": "View more",
+    "related": "Related articles",
+    "latest": "Latest articles",
+    "popular": "Popular",
+    "recommended": "Recommended",
+    "published": "Published"
+  },
+  "uns": {
+    "title": "Uns",
+    "subtitle": "Today's companion"
+  },
+  "categories": {
+    "tadabbur": "Reflection",
+    "hadith": "Hadith",
+    "this-day": "On this day",
+    "fatwa": "Fatwa"
+  }
+}

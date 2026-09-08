@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Home",
+    "prayer": "Prayer times & Qibla",
+    "zakat": "Zakat calculator",
+    "hadith": "Hadith",
+    "thisDay": "On this day",
+    "fatwas": "Fatwas & counsel",
+    "about": "About",
+    "search": "Search",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "chrome": {
+    "language": "العربية",
+    "themeLight": "Light mode",
+    "themeDark": "Dark mode",
+    "skip": "Skip to content"
+  },
+  "footer": {
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "cookies": "Cookies",
+    "contact": "Contact",
+    "about": "About",
+    "rights": "Mounis — an independent knowledge platform."
+  },
+  "search": {
+    "title": "Search Mounis",
+    "placeholder": "Article, hadith, fatwa, tool…",
+    "empty": "No matching results.",
+    "hint": "Search, then go straight to the page."
+  },
+  "hero": {
+    "kicker": "Your daily companion"
+  }
+}

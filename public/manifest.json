@@ -1,0 +1,49 @@
+{
+  "name": "مؤنس — رفيقك اليومي للتدبّر والمعرفة الإسلامية",
+  "short_name": "مؤنس",
+  "description": "مؤنس منصة عربية معاصرة للتدبّر، والأحاديث، ومواقيت الصلاة، وحاسبة الزكاة، والفتاوى، والمحتوى اليومي الموثوق.",
+  "start_url": "/ar",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#2d7a5f",
+  "orientation": "portrait",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/brand/mounis-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "lifestyle",
+    "utilities"
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "مواقيت الصلاة",
+      "short_name": "الصلاة",
+      "description": "مواقيت الصلاة واتجاه القبلة",
+      "url": "/ar/prayer",
+      "icons": []
+    },
+    {
+      "name": "حاسبة الزكاة",
+      "short_name": "الزكاة",
+      "description": "احسب زكاة مالك",
+      "url": "/ar/zakat",
+      "icons": []
+    },
+    {
+      "name": "المقالات",
+      "short_name": "مقالات",
+      "description": "تدبر وتأمل",
+      "url": "/ar/articles",
+      "icons": []
+    }
+  ]
+}

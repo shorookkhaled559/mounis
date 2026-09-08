@@ -1,0 +1,20 @@
+{
+  "comments": {
+    "title": "Comments",
+    "empty": "Comments are not open yet. This space is ready for when they are.",
+    "loadMore": "Show more",
+    "name": "Name",
+    "body": "Your comment",
+    "submit": "Send",
+    "pending": "Comments will be reviewed before they appear, to keep the discussion thoughtful.",
+    "reply": "Reply"
+  },
+  "subscribe": {
+    "title": "Notes from Mounis",
+    "body": "Leave your email for new articles, the daily companion, and the app launch.",
+    "placeholder": "Your email",
+    "submit": "Subscribe",
+    "success": "Thank you. We'll store this when email delivery is connected.",
+    "error": "Enter a valid email."
+  }
+}

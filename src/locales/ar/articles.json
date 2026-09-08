@@ -1,0 +1,28 @@
+{
+  "article": {
+    "featuredKicker": "تدبر وتأمل",
+    "reading": "دقائق قراءة",
+    "share": "مشاركة",
+    "copy": "نسخ الرابط",
+    "copied": "تم نسخ الرابط",
+    "bookmark": "حفظ",
+    "print": "طباعة",
+    "previous": "مقالات سابقة",
+    "viewMore": "مشاهدة المزيد",
+    "related": "مقالات ذات صلة",
+    "latest": "أحدث المقالات",
+    "popular": "الأكثر قراءة",
+    "recommended": "مقترحات لك",
+    "published": "نُشر في"
+  },
+  "uns": {
+    "title": "قسم أنس",
+    "subtitle": "ورد اليوم"
+  },
+  "categories": {
+    "tadabbur": "تدبر وتأمل",
+    "hadith": "حديث",
+    "this-day": "في مثل هذا اليوم",
+    "fatwa": "فتوى"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "path": "/",
+      "labelKey": "nav.home"
+    },
+    {
+      "id": "prayer",
+      "path": "/prayer",
+      "labelKey": "nav.prayer"
+    },
+    {
+      "id": "zakat",
+      "path": "/zakat",
+      "labelKey": "nav.zakat"
+    },
+    {
+      "id": "hadith",
+      "path": "/hadith",
+      "labelKey": "nav.hadith"
+    },
+    {
+      "id": "thisDay",
+      "path": "/this-day",
+      "labelKey": "nav.thisDay"
+    },
+    {
+      "id": "fatwas",
+      "path": "/fatwas",
+      "labelKey": "nav.fatwas"
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "labelKey": "nav.about"
+    }
+  ],
+  "footer": [
+    {
+      "id": "about",
+      "path": "/about",
+      "labelKey": "footer.about"
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "labelKey": "footer.contact"
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy",
+      "labelKey": "footer.privacy"
+    },
+    {
+      "id": "terms",
+      "path": "/terms",
+      "labelKey": "footer.terms"
+    },
+    {
+      "id": "cookies",
+      "path": "/cookies",
+      "labelKey": "footer.cookies"
+    }
+  ]
+}
