@@ -24,7 +24,15 @@ export function NavbarActions({
       <LanguageSwitcher locale={locale} pathname={pathname} />
       <ThemeToggle locale={locale} />
       <SearchDialog locale={locale} />
+<<<<<<< HEAD
       <MobileMenuToggle locale={locale} isOpen={isMobileMenuOpen} onToggle={onMobileMenuToggle} />
+=======
+      <MobileMenuToggle
+        locale={locale}
+        isOpen={isMobileMenuOpen}
+        onToggle={onMobileMenuToggle}
+      />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     </div>
   );
 }

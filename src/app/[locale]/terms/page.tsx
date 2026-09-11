@@ -15,12 +15,27 @@ export async function generateMetadata({
   return localeMetadata({
     locale: loc,
     title: t(loc, "footer", "terms"),
+<<<<<<< HEAD
     description: loc === "ar" ? "شروط استخدام موقع مؤنس." : "Terms of use for the Mounis website.",
+=======
+    description:
+      loc === "ar"
+        ? "شروط استخدام موقع مؤنس."
+        : "Terms of use for the Mounis website.",
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     path: "/terms",
   });
 }
 
+<<<<<<< HEAD
 export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+=======
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   const { locale } = await params;
   const loc = locale as Locale;
   const title = t(loc, "footer", "terms");

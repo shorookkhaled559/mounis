@@ -5,7 +5,17 @@ import { footerNav, mainNav } from "@/lib/data/navigation";
 import { t } from "@/lib/i18n/messages";
 import type { Locale } from "@/types";
 
+<<<<<<< HEAD
 export function SiteShell({ locale, children }: { locale: Locale; children: React.ReactNode }) {
+=======
+export function SiteShell({
+  locale,
+  children,
+}: {
+  locale: Locale;
+  children: React.ReactNode;
+}) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   return (
     <>
       <a href="#main" className="skip-link">

@@ -29,20 +29,32 @@ export async function generateMetadata({
   });
 }
 
+<<<<<<< HEAD
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+=======
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   const { locale } = await params;
   const loc = locale as Locale;
   const featured = getFeaturedArticle();
   const previous = getPreviousArticles(3);
 
+<<<<<<< HEAD
   if (!featured) {
     throw new Error("No featured article found");
   }
 
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   return (
     <>
       <JsonLd data={organizationJsonLd(loc)} />
       <JsonLd data={websiteJsonLd(loc)} />
+<<<<<<< HEAD
       <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),var(--page))] px-3 py-6 pb-12">
         <HomeHero locale={loc} />
         <div className="box-border grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)] lg:items-start">
@@ -50,6 +62,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <FeaturedArticle article={featured} locale={loc} />
             <AdSlot placement="in-content" locale={loc} />
             <ArticleList locale={loc} articles={previous} heading={t(loc, "article", "previous")} />
+=======
+      <div className="page-wrap">
+        <HomeHero locale={loc} />
+        <div className="content-with-sidebar">
+          <main id="main">
+            <FeaturedArticle article={featured} locale={loc} />
+            <AdSlot placement="in-content" locale={loc} />
+            <ArticleList
+              locale={loc}
+              articles={previous}
+              heading={t(loc, "article", "previous")}
+            />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
             <CommentsSection locale={loc} />
           </main>
           <Sidebar locale={loc} />

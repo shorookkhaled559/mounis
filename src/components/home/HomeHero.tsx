@@ -16,10 +16,17 @@ export function HomeHero({ locale }: HomeHeroProps) {
     month: "long",
     year: "numeric",
   }).format(now);
+<<<<<<< HEAD
 
   const hijri = new Intl.DateTimeFormat(
     locale === "ar" ? "ar-SA-u-ca-islamic" : "en-GB-u-ca-islamic",
     { day: "numeric", month: "long", year: "numeric" }
+=======
+  
+  const hijri = new Intl.DateTimeFormat(
+    locale === "ar" ? "ar-SA-u-ca-islamic" : "en-GB-u-ca-islamic",
+    { day: "numeric", month: "long", year: "numeric" },
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   ).format(now);
 
   const tools = [
@@ -29,6 +36,7 @@ export function HomeHero({ locale }: HomeHeroProps) {
   ];
 
   return (
+<<<<<<< HEAD
     <section className="mb-8 box-border w-full rounded-lg bg-gradient-to-b from-[var(--surface)] to-[var(--cream)] p-6 px-4 pb-5 shadow-sm md:p-10 md:px-6 md:pb-8">
       <p className="my-0 mb-2 text-[0.85rem] font-bold tracking-[0.04em] text-[var(--primary)] ltr:tracking-[0.08em] ltr:uppercase rtl:tracking-[0.04em]">
         {t(locale, "hero", "kicker")}
@@ -40,6 +48,17 @@ export function HomeHero({ locale }: HomeHeroProps) {
         {siteConfig.description[locale]}
       </p>
       <HeroDate gregorian={gregorian} hijri={hijri} isoDate={now.toISOString().slice(0, 10)} />
+=======
+    <section className="home-hero">
+      <p className="section-kicker">{t(locale, "hero", "kicker")}</p>
+      <p className="hero-title">{siteConfig.tagline[locale]}</p>
+      <p className="lede">{siteConfig.description[locale]}</p>
+      <HeroDate 
+        gregorian={gregorian} 
+        hijri={hijri} 
+        isoDate={now.toISOString().slice(0, 10)} 
+      />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
       <HeroTools tools={tools} />
     </section>
   );

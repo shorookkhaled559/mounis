@@ -32,11 +32,15 @@ export function Navbar({ locale, items }: NavbarProps) {
 
   return (
     <header className="site-header">
+<<<<<<< HEAD
       <div
         className="site-header-inner"
         data-locale={locale}
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
+=======
+      <div className="site-header-inner">
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         <NavbarBrand locale={locale} />
         <DesktopNav locale={locale} items={items} />
         <NavbarActions

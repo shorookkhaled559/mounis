@@ -31,7 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: path === "" ? 1 : 0.6,
         alternates: {
           languages: Object.fromEntries(
+<<<<<<< HEAD
             locales.map((code) => [code, `${siteConfig.url}/${code}${path}`])
+=======
+            locales.map((code) => [code, `${siteConfig.url}/${code}${path}`]),
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
           ),
         },
       });
@@ -44,7 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
+<<<<<<< HEAD
             locales.map((code) => [code, `${siteConfig.url}/${code}/articles/${article.slug}`])
+=======
+            locales.map((code) => [
+              code,
+              `${siteConfig.url}/${code}/articles/${article.slug}`,
+            ]),
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
           ),
         },
       });

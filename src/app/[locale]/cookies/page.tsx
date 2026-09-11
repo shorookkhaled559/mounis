@@ -23,7 +23,15 @@ export async function generateMetadata({
   });
 }
 
+<<<<<<< HEAD
 export default async function CookiesPage({ params }: { params: Promise<{ locale: string }> }) {
+=======
+export default async function CookiesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   const { locale } = await params;
   const loc = locale as Locale;
   const title = t(loc, "footer", "cookies");

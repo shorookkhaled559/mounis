@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description.ar,
   applicationName: siteConfig.name.ar,
+<<<<<<< HEAD
   keywords: [
     "مؤنس",
     "تدبر القرآن",
@@ -106,6 +107,9 @@ export const metadata: Metadata = {
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
+=======
+  icons: { icon: "/brand/mounis-mark.png", apple: "/brand/mounis-mark.png" },
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 };
 
 export const viewport: Viewport = {

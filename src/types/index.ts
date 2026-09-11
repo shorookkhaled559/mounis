@@ -28,7 +28,16 @@ export interface Article {
 }
 
 export type AdPlacement =
+<<<<<<< HEAD
   "banner-top" | "sidebar" | "in-content" | "between-sections" | "mobile" | "footer";
+=======
+  | "banner-top"
+  | "sidebar"
+  | "in-content"
+  | "between-sections"
+  | "mobile"
+  | "footer";
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 
 export interface UnsContent {
   dateIso: string;

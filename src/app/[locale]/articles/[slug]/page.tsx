@@ -10,7 +10,10 @@ import { localizedPath } from "@/lib/i18n/config";
 import { t } from "@/lib/i18n/messages";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo/jsonld";
 import { localeMetadata } from "@/lib/seo/metadata";
+<<<<<<< HEAD
 import { siteConfig } from "@/lib/site";
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 import type { Locale } from "@/types";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -32,22 +35,28 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (!article) return {};
   const loc = locale as Locale;
+<<<<<<< HEAD
 
   const imageUrl = article.image
     ? `${process.env.NEXT_PUBLIC_SITE_URL || "https://mounis.app"}${article.image}`
     : undefined;
 
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   return localeMetadata({
     locale: loc,
     title: article.title[loc],
     description: article.excerpt[loc],
     path: `/articles/${article.slug}`,
+<<<<<<< HEAD
     type: "article",
     ...(imageUrl && { image: imageUrl }),
     imageAlt: article.imageAlt?.[loc],
     publishedTime: article.publishedAt,
     section: t(loc, "categories", article.category),
     tags: [article.category, t(loc, "categories", article.category), siteConfig.name[loc]],
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   });
 }
 
@@ -63,7 +72,11 @@ export default async function ArticlePage({
   const related = getRelatedArticles(slug);
 
   return (
+<<<<<<< HEAD
     <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),var(--page))] px-3 py-6 pb-12">
+=======
+    <div className="page-wrap page-article">
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
       <JsonLd data={articleJsonLd(article, loc)} />
       <JsonLd
         data={breadcrumbJsonLd(loc, [

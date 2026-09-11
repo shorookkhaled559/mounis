@@ -20,6 +20,7 @@ export function ArticleHeader({
   publishedAt,
 }: ArticleHeaderProps) {
   return (
+<<<<<<< HEAD
     <header>
       <p className="my-0 mb-2 text-[0.85rem] font-bold tracking-[0.04em] text-[var(--primary)] ltr:tracking-[0.08em] ltr:uppercase rtl:tracking-[0.04em]">
         {t(locale, "article", "featuredKicker")}
@@ -31,11 +32,24 @@ export function ArticleHeader({
       <p className="mt-[0.85rem] mb-0 flex flex-wrap items-center gap-x-[0.6rem] gap-y-[0.45rem] text-[0.86rem] text-[var(--muted)]">
         <span>{t(locale, "categories", category)}</span>
         <span className="inline-block h-[3px] w-[3px] rounded-full bg-[var(--muted)]" />
+=======
+    <header className="featured-head">
+      <p className="section-kicker">{t(locale, "article", "featuredKicker")}</p>
+      <h1>{title}</h1>
+      <p className="lede">{excerpt}</p>
+      <p className="meta-row">
+        <span>{t(locale, "categories", category)}</span>
+        <span className="meta-dot" />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         <span className="inline-flex items-center gap-1">
           <ClockIcon className="size-4" />
           {readingMinutes} {t(locale, "article", "reading")}
         </span>
+<<<<<<< HEAD
         <span className="inline-block h-[3px] w-[3px] rounded-full bg-[var(--muted)]" />
+=======
+        <span className="meta-dot" />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         <time dateTime={publishedAt}>
           {t(locale, "article", "published")}{" "}
           {new Intl.DateTimeFormat(locale === "ar" ? "ar-SA" : "en-GB", {

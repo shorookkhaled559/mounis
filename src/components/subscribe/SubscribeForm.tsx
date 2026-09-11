@@ -24,6 +24,7 @@ export function SubscribeForm({ locale }: { locale: Locale }) {
   }
 
   return (
+<<<<<<< HEAD
     <section
       className="bg-gradient-to-[135deg] mt-8 box-border grid w-full items-center gap-[0.85rem] rounded-lg border border-[var(--line)] from-[var(--paper)] to-[var(--surface)] p-[1.15rem_1rem] shadow-sm md:grid-cols-[1.2fr_1fr] md:p-[1.35rem_1.4rem] rtl:text-right"
       aria-labelledby="subscribe-title"
@@ -60,6 +61,27 @@ export function SubscribeForm({ locale }: { locale: Locale }) {
           </label>
           <div className="flex items-center gap-2 rounded-md border border-[var(--line)] bg-[var(--cream)] px-[0.7rem] rtl:flex-row-reverse">
             <MailIcon className="size-5 text-[var(--muted)]" aria-hidden="true" />
+=======
+    <section className="subscribe" aria-labelledby="subscribe-title">
+      <div>
+        <p className="section-kicker">{siteConfig.name[locale]}</p>
+        <h2 id="subscribe-title" className="section-title">
+          {t(locale, "subscribe", "title")}
+        </h2>
+        <p className="lede">{t(locale, "subscribe", "body")}</p>
+      </div>
+      {status === "success" ? (
+        <p className="form-success" role="status">
+          {t(locale, "subscribe", "success")}
+        </p>
+      ) : (
+        <form className="subscribe-form" onSubmit={onSubmit} noValidate>
+          <label className="sr-only" htmlFor="mounis-email">
+            {t(locale, "subscribe", "placeholder")}
+          </label>
+          <div className="subscribe-field">
+            <MailIcon className="size-5 text-[var(--muted)]" />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
             <input
               id="mounis-email"
               type="email"
@@ -74,6 +96,7 @@ export function SubscribeForm({ locale }: { locale: Locale }) {
               placeholder={t(locale, "subscribe", "placeholder")}
               aria-invalid={status === "error"}
               aria-describedby={status === "error" ? "email-error" : undefined}
+<<<<<<< HEAD
               aria-required="true"
               className="w-full max-w-full border-0 bg-transparent px-0"
             />
@@ -92,6 +115,15 @@ export function SubscribeForm({ locale }: { locale: Locale }) {
               aria-live="assertive"
               aria-atomic="true"
             >
+=======
+            />
+          </div>
+          <button type="submit" className="btn-primary">
+            {t(locale, "subscribe", "submit")}
+          </button>
+          {status === "error" ? (
+            <p id="email-error" className="form-error" role="alert">
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
               {t(locale, "subscribe", "error")}
             </p>
           ) : null}

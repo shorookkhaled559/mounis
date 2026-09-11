@@ -9,6 +9,7 @@ export function QuoteBlock({
   locale: Locale;
 }) {
   return (
+<<<<<<< HEAD
     <figure className="mx-0 my-6 box-border grid w-full gap-[0.55rem] rounded-md border border-s-4 border-[var(--line)] border-s-[var(--accent)] bg-[var(--paper)] p-4 break-words shadow-sm md:p-5 md:px-[1.35rem]">
       <QuoteIcon className="size-5 shrink-0 text-[var(--forest)]" />
       <blockquote className="m-0">
@@ -17,6 +18,14 @@ export function QuoteBlock({
         </p>
       </blockquote>
       <figcaption className="text-[0.85rem] text-[var(--muted)]">{quote.source[locale]}</figcaption>
+=======
+    <figure className="quote-block">
+      <QuoteIcon className="size-5 shrink-0 text-[var(--forest)]" />
+      <blockquote>
+        <p>{quote.text[locale]}</p>
+      </blockquote>
+      <figcaption>{quote.source[locale]}</figcaption>
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     </figure>
   );
 }

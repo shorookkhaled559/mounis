@@ -1,7 +1,16 @@
 "use client";
 
 import { useState } from "react";
+<<<<<<< HEAD
 import { BookmarkIcon, LinkIcon, PrintIcon, ShareIcon } from "@/components/icons";
+=======
+import {
+  BookmarkIcon,
+  LinkIcon,
+  PrintIcon,
+  ShareIcon,
+} from "@/components/icons";
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 import { track } from "@/lib/analytics/track";
 import { t } from "@/lib/i18n/messages";
 import type { Locale } from "@/types";
@@ -38,6 +47,7 @@ export function ShareActions({
   }
 
   return (
+<<<<<<< HEAD
     <div
       className="share-bar mx-0 my-2 mb-8 flex flex-wrap gap-[0.35rem] border-t border-[var(--line)] pt-3 rtl:flex-row-reverse"
       role="group"
@@ -60,10 +70,20 @@ export function ShareActions({
         aria-live="polite"
       >
         <LinkIcon className="size-5" aria-hidden="true" />
+=======
+    <div className="share-bar" role="group" aria-label={t(locale, "article", "share")}>
+      <button type="button" className="icon-btn" onClick={share}>
+        <ShareIcon className="size-5" />
+        <span>{t(locale, "article", "share")}</span>
+      </button>
+      <button type="button" className="icon-btn" onClick={copyLink}>
+        <LinkIcon className="size-5" />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         <span>{copied ? t(locale, "article", "copied") : t(locale, "article", "copy")}</span>
       </button>
       <button
         type="button"
+<<<<<<< HEAD
         className="inline-flex min-h-[2.75rem] cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 text-[var(--ink)] transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
         onClick={() => {
           track("share", { method: "bookmark-intent" });
@@ -80,6 +100,18 @@ export function ShareActions({
         aria-label={`${t(locale, "article", "print")} - ${title}`}
       >
         <PrintIcon className="size-5" aria-hidden="true" />
+=======
+        className="icon-btn"
+        onClick={() => {
+          track("share", { method: "bookmark-intent" });
+        }}
+      >
+        <BookmarkIcon className="size-5" />
+        <span>{t(locale, "article", "bookmark")}</span>
+      </button>
+      <button type="button" className="icon-btn" onClick={() => window.print()}>
+        <PrintIcon className="size-5" />
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         <span>{t(locale, "article", "print")}</span>
       </button>
     </div>

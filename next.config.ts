@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+<<<<<<< HEAD
 
   async headers() {
     return [
@@ -79,6 +80,8 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 };
 
 export default nextConfig;

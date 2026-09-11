@@ -11,19 +11,31 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/brand") ||
+<<<<<<< HEAD
     (pathname.startsWith("/articles/") && pathname.includes(".")) ||
+=======
+    pathname.startsWith("/articles/") && pathname.includes(".") ||
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();
   }
 
   const segment = pathname.split("/")[1];
+<<<<<<< HEAD
   const locale = isLocale(segment ?? "") ? (segment ?? "") : defaultLocale;
+=======
+  const locale = isLocale(segment) ? segment : defaultLocale;
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   const headers = new Headers(request.headers);
   headers.set("x-locale", locale);
 
   // Redirect root and paths without locale to the default locale
+<<<<<<< HEAD
   if (!isLocale(segment ?? "")) {
+=======
+  if (!isLocale(segment)) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
     return NextResponse.redirect(url);

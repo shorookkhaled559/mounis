@@ -13,7 +13,11 @@ export function FeaturedArticle({ article, locale }: FeaturedArticleProps) {
   const url = `${siteConfig.url}/${locale}/articles/${article.slug}`;
 
   return (
+<<<<<<< HEAD
     <article className="box-border w-full max-w-[var(--reading)]">
+=======
+    <article className="featured-article">
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
       <ArticleHeader
         locale={locale}
         title={article.title[locale]}

@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
+<<<<<<< HEAD
 import { useEffect, useRef } from "react";
+=======
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
 import { t } from "@/lib/i18n/messages";
 import type { Locale } from "@/types";
 
@@ -13,6 +16,7 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ locale, items, isOpen, onItemClick }: MobileNavProps) {
+<<<<<<< HEAD
   const navRef = useRef<HTMLElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
 
@@ -48,6 +52,14 @@ export function MobileNav({ locale, items, isOpen, onItemClick }: MobileNavProps
           onClick={onItemClick}
           className="border-b border-white/10 px-[0.35rem] py-[0.85rem] font-medium break-words !text-white no-underline transition-all duration-200 hover:ps-3 hover:!text-white rtl:hover:ps-[0.35rem] rtl:hover:pe-3"
         >
+=======
+  if (!isOpen) return null;
+
+  return (
+    <nav id="mobile-nav" className="mobile-nav" aria-label={t(locale, "nav", "menu")}>
+      {items.map((item) => (
+        <Link key={item.href} href={item.href} onClick={onItemClick}>
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
           {item.label}
         </Link>
       ))}

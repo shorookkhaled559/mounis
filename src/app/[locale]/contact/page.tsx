@@ -15,12 +15,25 @@ export async function generateMetadata({
   return localeMetadata({
     locale: loc,
     title: t(loc, "footer", "contact"),
+<<<<<<< HEAD
     description: loc === "ar" ? "تواصل مع فريق مؤنس." : "Contact the Mounis team.",
+=======
+    description:
+      loc === "ar" ? "تواصل مع فريق مؤنس." : "Contact the Mounis team.",
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
     path: "/contact",
   });
 }
 
+<<<<<<< HEAD
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+=======
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
   const { locale } = await params;
   const loc = locale as Locale;
   const title = t(loc, "footer", "contact");

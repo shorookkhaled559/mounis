@@ -19,6 +19,7 @@ export function CommentsSection({ locale }: { locale: Locale }) {
   }
 
   return (
+<<<<<<< HEAD
     <section className="mt-9 border-t border-[var(--line)] pt-6" aria-labelledby="comments-title">
       <div className="section-head flex items-baseline justify-between gap-4 rtl:flex-row-reverse">
         <h2 id="comments-title" className="m-0 text-xl font-bold text-[var(--ink)]">
@@ -69,10 +70,35 @@ export function CommentsSection({ locale }: { locale: Locale }) {
             type="submit"
             className="min-h-[2.85rem] cursor-pointer justify-self-start rounded-md border-0 bg-[var(--primary)] px-[1.35rem] py-3 font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-[var(--primary-deep)] hover:shadow-md dark:text-[var(--ink)]"
           >
+=======
+    <section className="comments" aria-labelledby="comments-title">
+      <div className="section-head">
+        <h2 id="comments-title" className="section-title">
+          {t(locale, "comments", "title")}
+        </h2>
+      </div>
+      <p className="lede">{t(locale, "comments", "empty")}</p>
+      {submitted ? (
+        <p className="form-success" role="status">
+          {t(locale, "comments", "pending")}
+        </p>
+      ) : (
+        <form className="comment-form" onSubmit={onSubmit}>
+          <label>
+            {t(locale, "comments", "name")}
+            <input name="name" required autoComplete="name" />
+          </label>
+          <label>
+            {t(locale, "comments", "body")}
+            <textarea name="body" required rows={3} />
+          </label>
+          <button type="submit" className="btn-primary">
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
             {t(locale, "comments", "submit")}
           </button>
         </form>
       )}
+<<<<<<< HEAD
       <button
         type="button"
         className="mt-4 cursor-pointer justify-self-start border-0 bg-transparent p-0 font-medium text-[var(--primary)] transition-colors duration-200 hover:text-[var(--primary-deep)] disabled:cursor-not-allowed disabled:text-[var(--muted)]"
@@ -80,6 +106,9 @@ export function CommentsSection({ locale }: { locale: Locale }) {
         aria-label={t(locale, "comments", "loadMore")}
         aria-disabled="true"
       >
+=======
+      <button type="button" className="load-more" disabled>
+>>>>>>> a2b2fbeca1813caecb2179cd3949f7b9f57cf47c
         {t(locale, "comments", "loadMore")}
       </button>
     </section>
