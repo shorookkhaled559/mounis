@@ -7,7 +7,7 @@ interface ArticleVisualProps {
 
 export function ArticleVisual({ src, alt }: ArticleVisualProps) {
   return (
-    <div className="my-5 mx-0 bg-[var(--surface)] border border-[var(--line)] rounded-lg overflow-hidden aspect-[96/42] shadow-md w-full max-w-full">
+    <div className="mx-0 my-5 aspect-[96/42] w-full max-w-full overflow-hidden rounded-lg border border-[var(--line)] bg-[var(--surface)] shadow-md">
       <Image
         src={src}
         alt={alt}
@@ -15,7 +15,7 @@ export function ArticleVisual({ src, alt }: ArticleVisualProps) {
         height={420}
         priority
         sizes="(max-width: 900px) 100vw, 720px"
-        className="w-full h-full object-cover block max-w-full"
+        className="block h-full w-full max-w-full object-cover"
       />
     </div>
   );

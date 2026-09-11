@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
-  icons: { 
-    icon: "/brand/mounis-mark.png", 
+  icons: {
+    icon: "/brand/mounis-mark.png",
     apple: "/brand/mounis-mark.png",
     shortcut: "/brand/mounis-mark.png",
   },

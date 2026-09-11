@@ -21,7 +21,7 @@ export function AdSlot({
       data-ad-network="placeholder"
     >
       <div
-        className="grid place-content-center gap-[0.2rem] text-center bg-[repeating-linear-gradient(-45deg,var(--ad-bg),var(--ad-bg)_8px,color-mix(in_srgb,var(--ad-bg)_88%,var(--line))_8px,color-mix(in_srgb,var(--ad-bg)_88%,var(--line))_16px)] border border-dashed border-[color-mix(in_srgb,var(--ad-ink)_45%,var(--line))] text-[var(--ad-ink)] text-[0.78rem] tracking-[0.02em]"
+        className="grid place-content-center gap-[0.2rem] border border-dashed border-[color-mix(in_srgb,var(--ad-ink)_45%,var(--line))] bg-[repeating-linear-gradient(-45deg,var(--ad-bg),var(--ad-bg)_8px,color-mix(in_srgb,var(--ad-bg)_88%,var(--line))_8px,color-mix(in_srgb,var(--ad-bg)_88%,var(--line))_16px)] text-center text-[0.78rem] tracking-[0.02em] text-[var(--ad-ink)]"
         style={{ minHeight: size.height, minWidth: Math.min(size.width, 320) }}
       >
         <span className="font-bold uppercase">{t(locale, "ads", "label")}</span>

@@ -25,11 +25,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function HadithPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HadithPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
   const hadithArticles = articles.filter((article) => article.category === "hadith");

@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  BookmarkIcon,
-  LinkIcon,
-  PrintIcon,
-  ShareIcon,
-} from "@/components/icons";
+import { BookmarkIcon, LinkIcon, PrintIcon, ShareIcon } from "@/components/icons";
 import { track } from "@/lib/analytics/track";
 import { t } from "@/lib/i18n/messages";
 import type { Locale } from "@/types";
@@ -43,19 +38,23 @@ export function ShareActions({
   }
 
   return (
-    <div className="flex flex-wrap gap-[0.35rem] my-2 mx-0 mb-8 pt-3 border-t border-[var(--line)]" role="group" aria-label={t(locale, "article", "share")}>
-      <button 
-        type="button" 
-        className="inline-flex items-center justify-center gap-[0.4rem] border border-[var(--line)] min-h-[2.75rem] px-3 bg-[var(--paper)] text-[var(--ink)] rounded-md cursor-pointer transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]" 
+    <div
+      className="share-bar mx-0 my-2 mb-8 flex flex-wrap gap-[0.35rem] border-t border-[var(--line)] pt-3 rtl:flex-row-reverse"
+      role="group"
+      aria-label={t(locale, "article", "share")}
+    >
+      <button
+        type="button"
+        className="inline-flex min-h-[2.75rem] cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 text-[var(--ink)] transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
         onClick={share}
         aria-label={`${t(locale, "article", "share")} - ${title}`}
       >
         <ShareIcon className="size-5" aria-hidden="true" />
         <span>{t(locale, "article", "share")}</span>
       </button>
-      <button 
-        type="button" 
-        className="inline-flex items-center justify-center gap-[0.4rem] border border-[var(--line)] min-h-[2.75rem] px-3 bg-[var(--paper)] text-[var(--ink)] rounded-md cursor-pointer transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]" 
+      <button
+        type="button"
+        className="inline-flex min-h-[2.75rem] cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 text-[var(--ink)] transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
         onClick={copyLink}
         aria-label={copied ? t(locale, "article", "copied") : t(locale, "article", "copy")}
         aria-live="polite"
@@ -65,7 +64,7 @@ export function ShareActions({
       </button>
       <button
         type="button"
-        className="inline-flex items-center justify-center gap-[0.4rem] border border-[var(--line)] min-h-[2.75rem] px-3 bg-[var(--paper)] text-[var(--ink)] rounded-md cursor-pointer transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
+        className="inline-flex min-h-[2.75rem] cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 text-[var(--ink)] transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
         onClick={() => {
           track("share", { method: "bookmark-intent" });
         }}
@@ -74,9 +73,9 @@ export function ShareActions({
         <BookmarkIcon className="size-5" aria-hidden="true" />
         <span>{t(locale, "article", "bookmark")}</span>
       </button>
-      <button 
-        type="button" 
-        className="inline-flex items-center justify-center gap-[0.4rem] border border-[var(--line)] min-h-[2.75rem] px-3 bg-[var(--paper)] text-[var(--ink)] rounded-md cursor-pointer transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]" 
+      <button
+        type="button"
+        className="inline-flex min-h-[2.75rem] cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 text-[var(--ink)] transition-all duration-200 hover:border-[var(--primary)] hover:bg-[var(--primary-subtle)]"
         onClick={() => window.print()}
         aria-label={`${t(locale, "article", "print")} - ${title}`}
       >

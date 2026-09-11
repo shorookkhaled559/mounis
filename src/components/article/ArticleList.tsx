@@ -19,24 +19,30 @@ export function ArticleList({
   id?: string;
 }) {
   return (
-    <section className="grid gap-4 my-8" aria-labelledby={id}>
-      <div className="flex items-baseline justify-between gap-4">
+    <section className="my-8 grid gap-4" aria-labelledby={id}>
+      <div className="section-head flex items-baseline justify-between gap-4 rtl:flex-row-reverse">
         <h2 id={id} className="m-0 text-xl font-bold text-[var(--ink)]">
           {heading}
         </h2>
         {viewMoreHref ? (
-          <Link href={viewMoreHref} className="inline-flex items-center gap-[0.3rem] no-underline text-[var(--primary)] text-[0.9rem] font-medium whitespace-nowrap transition-colors duration-200 hover:text-[var(--primary-deep)]">
+          <Link
+            href={viewMoreHref}
+            className="inline-flex items-center gap-[0.3rem] text-[0.9rem] font-medium whitespace-nowrap text-[var(--primary)] no-underline transition-colors duration-200 hover:text-[var(--primary-deep)]"
+          >
             {t(locale, "article", "viewMore")}
             <ArrowIcon className="size-4" />
           </Link>
         ) : (
-          <Link href={localizedPath(locale, "/articles")} className="inline-flex items-center gap-[0.3rem] no-underline text-[var(--primary)] text-[0.9rem] font-medium whitespace-nowrap transition-colors duration-200 hover:text-[var(--primary-deep)]">
+          <Link
+            href={localizedPath(locale, "/articles")}
+            className="inline-flex items-center gap-[0.3rem] text-[0.9rem] font-medium whitespace-nowrap text-[var(--primary)] no-underline transition-colors duration-200 hover:text-[var(--primary-deep)]"
+          >
             {t(locale, "article", "viewMore")}
             <ArrowIcon className="size-4" />
           </Link>
         )}
       </div>
-      <div className="grid gap-4 w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <ArticleCard key={article.slug} article={article} locale={locale} />
         ))}

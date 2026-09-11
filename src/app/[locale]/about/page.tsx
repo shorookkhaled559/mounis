@@ -23,11 +23,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
   const title = t(loc, "nav", "about");
@@ -65,8 +61,8 @@ export default async function AboutPage({
           <>
             <p>
               Mounis is Arabic-first by design: a daily companion rather than a campaign page. We
-              write reflection, prepare practical tools such as prayer times and zakat, and build
-              an archive worth returning to.
+              write reflection, prepare practical tools such as prayer times and zakat, and build an
+              archive worth returning to.
             </p>
             <p>
               The name sets the relationship: companionship, not noise. That is why the visual

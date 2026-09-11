@@ -45,7 +45,7 @@ export function SearchDialog({ locale }: { locale: Locale }) {
       setQuery("");
       document.body.style.overflow = "";
     }
-    
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -55,11 +55,11 @@ export function SearchDialog({ locale }: { locale: Locale }) {
     const found = searchArticles(query);
     if (query.trim()) track("search_query", { length: query.length });
     const tools = mainNav(locale).filter((item) =>
-      item.label.toLowerCase().includes(query.trim().toLowerCase()),
+      item.label.toLowerCase().includes(query.trim().toLowerCase())
     );
     return { articles: found, tools: query.trim() ? tools : [] };
   }, [query, locale]);
-  
+
   const handleClose = () => {
     setOpen(false);
     // Return focus to trigger button when closing
@@ -71,7 +71,7 @@ export function SearchDialog({ locale }: { locale: Locale }) {
       <button
         ref={triggerButtonRef}
         type="button"
-        className="inline-flex items-center justify-center gap-[0.4rem] min-w-[2.35rem] min-h-[2.35rem] p-[0.35rem_0.45rem] border-0 bg-transparent text-white rounded-md cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-white/15 hover:text-white md:min-w-[2.65rem] md:min-h-[2.65rem] md:p-[0.4rem_0.55rem]"
+        className="inline-flex min-h-[2.35rem] min-w-[2.35rem] flex-shrink-0 cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border-0 bg-transparent p-[0.35rem_0.45rem] text-white transition-colors duration-200 hover:bg-white/15 hover:text-white md:min-h-[2.65rem] md:min-w-[2.65rem] md:p-[0.4rem_0.55rem]"
         aria-label={t(locale, "nav", "search")}
         aria-expanded={open}
         aria-controls="search-dialog"
@@ -80,21 +80,21 @@ export function SearchDialog({ locale }: { locale: Locale }) {
         <SearchIcon className="size-5" />
       </button>
       {open ? (
-        <div 
-          className="fixed inset-0 z-[60] bg-black/50 backdrop-blur grid items-start justify-center pt-[12vh] px-4 pb-8" 
-          role="presentation" 
+        <div
+          className="fixed inset-0 z-[60] grid items-start justify-center bg-black/50 px-4 pt-[12vh] pb-8 backdrop-blur"
+          role="presentation"
           onClick={handleClose}
           aria-hidden="true"
         >
           <div
             id="search-dialog"
-            className="w-full max-w-[36rem] bg-[var(--paper)] border border-[var(--line)] rounded-lg shadow-lg overflow-hidden"
+            className="w-full max-w-[36rem] overflow-hidden rounded-lg border border-[var(--line)] bg-[var(--paper)] shadow-lg"
             role="dialog"
             aria-modal="true"
             aria-labelledby={inputId}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-center gap-2 py-[0.65rem] px-[0.7rem] border-b border-[var(--line)]">
+            <div className="flex items-center gap-2 border-b border-[var(--line)] px-[0.7rem] py-[0.65rem]">
               <SearchIcon className="size-5 text-[var(--muted)]" aria-hidden="true" />
               <input
                 ref={inputRef}
@@ -108,24 +108,28 @@ export function SearchDialog({ locale }: { locale: Locale }) {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck="false"
-                className="border-0 bg-transparent w-full"
+                className="w-full border-0 bg-transparent"
               />
               <button
                 ref={closeButtonRef}
                 type="button"
-                className="inline-flex items-center justify-center gap-[0.4rem] min-w-[2.35rem] min-h-[2.35rem] p-[0.35rem_0.45rem] border-0 bg-transparent text-[var(--ink)] rounded-md cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-[var(--primary-subtle)] md:min-w-[2.65rem] md:min-h-[2.65rem] md:p-[0.4rem_0.55rem]"
+                className="inline-flex min-h-[2.35rem] min-w-[2.35rem] flex-shrink-0 cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border-0 bg-transparent p-[0.35rem_0.45rem] text-[var(--ink)] transition-colors duration-200 hover:bg-[var(--primary-subtle)] md:min-h-[2.65rem] md:min-w-[2.65rem] md:p-[0.4rem_0.55rem]"
                 aria-label={t(locale, "nav", "close")}
                 onClick={handleClose}
               >
                 <CloseIcon className="size-5" />
               </button>
             </div>
-            <p className="m-0 py-[0.55rem] px-[0.9rem] text-[var(--muted)] text-[0.82rem]" role="status" aria-live="polite">
+            <p
+              className="m-0 px-[0.9rem] py-[0.55rem] text-[0.82rem] text-[var(--muted)]"
+              role="status"
+              aria-live="polite"
+            >
               {t(locale, "search", "hint")}
             </p>
-            <div 
-              className="grid pt-1 pb-2.5" 
-              role="listbox" 
+            <div
+              className="grid pt-1 pb-2.5"
+              role="listbox"
               aria-label={t(locale, "search", "title")}
             >
               {!query.trim()
@@ -134,17 +138,15 @@ export function SearchDialog({ locale }: { locale: Locale }) {
                       key={article.slug}
                       href={localizedPath(locale, `/articles/${article.slug}`)}
                       onClick={handleClose}
-                      className="py-[0.65rem] px-[0.9rem] no-underline hover:bg-[var(--primary-subtle)]"
+                      className="px-[0.9rem] py-[0.65rem] no-underline hover:bg-[var(--primary-subtle)]"
                       role="option"
                     >
                       {article.title[locale]}
                     </Link>
                   ))
                 : null}
-              {query.trim() &&
-              results.articles.length === 0 &&
-              results.tools.length === 0 ? (
-                <p className="py-[0.65rem] px-[0.9rem] m-0" role="status">
+              {query.trim() && results.articles.length === 0 && results.tools.length === 0 ? (
+                <p className="m-0 px-[0.9rem] py-[0.65rem]" role="status">
                   {t(locale, "search", "empty")}
                 </p>
               ) : null}
@@ -153,18 +155,18 @@ export function SearchDialog({ locale }: { locale: Locale }) {
                   key={article.slug}
                   href={localizedPath(locale, `/articles/${article.slug}`)}
                   onClick={handleClose}
-                  className="py-[0.65rem] px-[0.9rem] no-underline hover:bg-[var(--primary-subtle)]"
+                  className="px-[0.9rem] py-[0.65rem] no-underline hover:bg-[var(--primary-subtle)]"
                   role="option"
                 >
                   {article.title[locale]}
                 </Link>
               ))}
               {results.tools.map((item) => (
-                <Link 
-                  key={item.href} 
-                  href={item.href} 
-                  onClick={handleClose} 
-                  className="py-[0.65rem] px-[0.9rem] no-underline hover:bg-[var(--primary-subtle)]"
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={handleClose}
+                  className="px-[0.9rem] py-[0.65rem] no-underline hover:bg-[var(--primary-subtle)]"
                   role="option"
                 >
                   {item.label}

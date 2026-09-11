@@ -29,11 +29,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
   const featured = getFeaturedArticle();
@@ -47,17 +43,13 @@ export default async function HomePage({
     <>
       <JsonLd data={organizationJsonLd(loc)} />
       <JsonLd data={websiteJsonLd(loc)} />
-      <div className="w-full max-w-[min(calc(100%-1.5rem),var(--page))] mx-auto px-3 py-6 pb-12 box-border">
+      <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),var(--page))] px-3 py-6 pb-12">
         <HomeHero locale={loc} />
-        <div className="grid gap-8 w-full box-border lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)] lg:items-start">
+        <div className="box-border grid w-full gap-8 lg:grid-cols-[minmax(0,1fr)_var(--sidebar-w)] lg:items-start">
           <main id="main">
             <FeaturedArticle article={featured} locale={loc} />
             <AdSlot placement="in-content" locale={loc} />
-            <ArticleList
-              locale={loc}
-              articles={previous}
-              heading={t(loc, "article", "previous")}
-            />
+            <ArticleList locale={loc} articles={previous} heading={t(loc, "article", "previous")} />
             <CommentsSection locale={loc} />
           </main>
           <Sidebar locale={loc} />

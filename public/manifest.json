@@ -17,11 +17,7 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": [
-    "education",
-    "lifestyle",
-    "utilities"
-  ],
+  "categories": ["education", "lifestyle", "utilities"],
   "screenshots": [],
   "shortcuts": [
     {

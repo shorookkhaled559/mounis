@@ -8,9 +8,11 @@ interface FooterBrandProps {
 
 export function FooterBrand({ locale }: FooterBrandProps) {
   return (
-    <div className="grid gap-2 text-[var(--muted)] w-full max-w-full overflow-hidden">
+    <div className="grid w-full max-w-full gap-2 overflow-hidden text-[var(--muted)]">
       <BrandMark locale={locale} size={96} />
-      <p className="font-semibold letter-spacing-[-0.02em] text-[var(--ink)]">{siteConfig.name[locale]}</p>
+      <p className="letter-spacing-[-0.02em] font-semibold text-[var(--ink)]">
+        {siteConfig.name[locale]}
+      </p>
       <p>{siteConfig.tagline[locale]}</p>
     </div>
   );

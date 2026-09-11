@@ -2,13 +2,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 import type { Locale } from "@/types";
 
-export function BrandMark({
-  locale,
-  size = 180,
-}: {
-  locale: Locale;
-  size?: number;
-}) {
+export function BrandMark({ locale, size = 180 }: { locale: Locale; size?: number }) {
   return (
     <div className="brand-mark-wrapper">
       <Image
@@ -19,9 +13,9 @@ export function BrandMark({
         className="brand-mark"
         priority
         style={{
-          width: '100%',
+          width: "100%",
           maxWidth: `${size}px`,
-          height: 'auto',
+          height: "auto",
         }}
       />
     </div>

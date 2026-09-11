@@ -32,9 +32,11 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (!article) return {};
   const loc = locale as Locale;
-  
-  const imageUrl = article.image ? `${process.env.NEXT_PUBLIC_SITE_URL || "https://mounis.app"}${article.image}` : undefined;
-  
+
+  const imageUrl = article.image
+    ? `${process.env.NEXT_PUBLIC_SITE_URL || "https://mounis.app"}${article.image}`
+    : undefined;
+
   return localeMetadata({
     locale: loc,
     title: article.title[loc],
@@ -45,11 +47,7 @@ export async function generateMetadata({
     imageAlt: article.imageAlt?.[loc],
     publishedTime: article.publishedAt,
     section: t(loc, "categories", article.category),
-    tags: [
-      article.category,
-      t(loc, "categories", article.category),
-      siteConfig.name[loc],
-    ],
+    tags: [article.category, t(loc, "categories", article.category), siteConfig.name[loc]],
   });
 }
 
@@ -65,7 +63,7 @@ export default async function ArticlePage({
   const related = getRelatedArticles(slug);
 
   return (
-    <div className="w-full max-w-[min(calc(100%-1.5rem),var(--page))] mx-auto px-3 py-6 pb-12 box-border">
+    <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),var(--page))] px-3 py-6 pb-12">
       <JsonLd data={articleJsonLd(article, loc)} />
       <JsonLd
         data={breadcrumbJsonLd(loc, [

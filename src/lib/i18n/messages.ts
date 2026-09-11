@@ -45,12 +45,12 @@ function getNestedValue(obj: any, path: string): string {
 // 2. t(locale, "group", "key") - old style (backward compatible)
 export function t(locale: Locale, groupOrKey: string, key?: string): string {
   const messages = locale === "ar" ? messagesAr : messagesEn;
-  
+
   // Old style: t(locale, "group", "key")
   if (key !== undefined) {
     return getNestedValue(messages, `${groupOrKey}.${key}`);
   }
-  
+
   // New style: t(locale, "dotted.key")
   return getNestedValue(messages, groupOrKey);
 }

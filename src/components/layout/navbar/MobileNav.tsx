@@ -25,7 +25,7 @@ export function MobileNav({ locale, items, isOpen, onItemClick }: MobileNavProps
     } else {
       document.body.style.overflow = "";
     }
-    
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -34,19 +34,19 @@ export function MobileNav({ locale, items, isOpen, onItemClick }: MobileNavProps
   if (!isOpen) return null;
 
   return (
-    <nav 
+    <nav
       ref={navRef}
-      id="mobile-nav" 
-      className="grid bg-gradient-to-b from-[var(--primary-deep)] to-[var(--primary)] pt-3 px-4 pb-5 w-full box-border" 
+      id="mobile-nav"
+      className="box-border grid w-full bg-gradient-to-b from-[var(--primary-deep)] to-[var(--primary)] px-4 pt-3 pb-5 sm:hidden"
       aria-label={t(locale, "nav", "menu")}
     >
       {items.map((item, index) => (
-        <Link 
-          key={item.href} 
+        <Link
+          key={item.href}
           ref={index === 0 ? firstLinkRef : null}
-          href={item.href} 
-          onClick={onItemClick} 
-          className="no-underline py-[0.85rem] px-[0.35rem] border-b border-white/10 !text-white font-medium transition-all duration-200 break-words hover:!text-white hover:ps-3"
+          href={item.href}
+          onClick={onItemClick}
+          className="border-b border-white/10 px-[0.35rem] py-[0.85rem] font-medium break-words !text-white no-underline transition-all duration-200 hover:ps-3 hover:!text-white rtl:hover:ps-[0.35rem] rtl:hover:pe-3"
         >
           {item.label}
         </Link>

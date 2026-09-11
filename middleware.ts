@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/brand") ||
-    pathname.startsWith("/articles/") && pathname.includes(".") ||
+    (pathname.startsWith("/articles/") && pathname.includes(".")) ||
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();

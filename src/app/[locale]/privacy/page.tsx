@@ -23,11 +23,7 @@ export async function generateMetadata({
   });
 }
 
-export default async function PrivacyPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
   const title = t(loc, "footer", "privacy");
@@ -46,9 +42,8 @@ export default async function PrivacyPage({
         {loc === "ar" ? (
           <>
             <p>
-              مؤنس منصة محتوى. في هذه المرحلة لا ننشئ حسابات مستخدمين ولا نخزّن تعليقات عامة.
-              عند تفعيل الاشتراك بالبريد أو شبكات الإعلان، سنحدّث هذه الصفحة قبل الجمع الفعلي
-              للبيانات.
+              مؤنس منصة محتوى. في هذه المرحلة لا ننشئ حسابات مستخدمين ولا نخزّن تعليقات عامة. عند
+              تفعيل الاشتراك بالبريد أو شبكات الإعلان، سنحدّث هذه الصفحة قبل الجمع الفعلي للبيانات.
             </p>
             <h2>ما قد يُجمع لاحقًا</h2>
             <p>البريد الإلكتروني عند الاشتراك، وبيانات تقنية لازمة لعرض الإعلانات وقياس الأداء.</p>
@@ -66,7 +61,9 @@ export default async function PrivacyPage({
               updated before any actual collection.
             </p>
             <h2>What may be collected later</h2>
-            <p>Email on subscribe, and technical data needed to serve ads and measure performance.</p>
+            <p>
+              Email on subscribe, and technical data needed to serve ads and measure performance.
+            </p>
             <h2>Advertising</h2>
             <p>
               Ad slots are reserved development placeholders. When Google AdSense or Google Ad

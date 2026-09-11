@@ -1,9 +1,6 @@
 import type { AdPlacement } from "@/types";
 
-export const adSlotSizes: Record<
-  AdPlacement,
-  { width: number; height: number; label: string }
-> = {
+export const adSlotSizes: Record<AdPlacement, { width: number; height: number; label: string }> = {
   "banner-top": { width: 728, height: 90, label: "Banner" },
   sidebar: { width: 300, height: 250, label: "Sidebar" },
   "in-content": { width: 336, height: 280, label: "In-content" },

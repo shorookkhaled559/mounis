@@ -10,10 +10,15 @@ export function FooterNav({ title, items, ariaLabel }: FooterNavProps) {
   return (
     <nav aria-label={ariaLabel}>
       <p className="m-0 mb-2 font-semibold text-[var(--ink)]">{title}</p>
-      <ul className="list-none m-0 p-0 grid gap-[0.4rem]">
+      <ul className="m-0 grid list-none gap-[0.4rem] p-0">
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} className="no-underline text-[var(--muted)] hover:text-[var(--primary)]">{item.label}</Link>
+            <Link
+              href={item.href}
+              className="text-[var(--muted)] no-underline hover:text-[var(--primary)]"
+            >
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

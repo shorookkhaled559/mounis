@@ -12,7 +12,7 @@ export function pageMeta(
   locale: Locale,
   title: string,
   description: string,
-  path: string,
+  path: string
 ): Metadata {
   return localeMetadata({ locale, title, description, path });
 }
@@ -36,7 +36,7 @@ export function PageIntro({
           { name: title, path },
         ])}
       />
-      <div className="w-full max-w-[min(calc(100%-1.5rem),42rem)] mx-auto px-3 box-border">
+      <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),42rem)] px-3 rtl:text-right">
         <Breadcrumbs
           locale={locale}
           items={[
@@ -44,9 +44,11 @@ export function PageIntro({
             { href: localizedPath(locale, path), label: title },
           ]}
         />
-        <main id="main" className="grid gap-[0.85rem]">
+        <main id="main" className="grid gap-[0.85rem] rtl:text-right">
           <h1 className="m-0 text-[1.7rem]">{title}</h1>
-          <p className="text-[var(--muted)] max-w-full my-0 mt-[0.65rem] break-words">{description}</p>
+          <p className="my-0 mt-[0.65rem] max-w-full break-words text-[var(--muted)]">
+            {description}
+          </p>
         </main>
       </div>
     </>
@@ -72,7 +74,7 @@ export function ToolPlaceholder({
           { name: title, path },
         ])}
       />
-      <div className="w-full max-w-[min(calc(100%-1.5rem),42rem)] mx-auto px-3 box-border">
+      <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),42rem)] px-3 rtl:text-right">
         <Breadcrumbs
           locale={locale}
           items={[
@@ -80,15 +82,15 @@ export function ToolPlaceholder({
             { href: localizedPath(locale, path), label: title },
           ]}
         />
-        <main id="main" className="grid gap-[0.85rem]">
+        <main id="main" className="grid gap-[0.85rem] rtl:text-right">
           <h1 className="m-0 text-[1.7rem]">{title}</h1>
-          <p className="text-[var(--muted)] max-w-full my-0 mt-[0.65rem] break-words">{description}</p>
+          <p className="my-0 mt-[0.65rem] max-w-full break-words text-[var(--muted)]">
+            {description}
+          </p>
           <p>{t(locale, "tools", "coming")}</p>
           <p>
             {t(locale, "tools", "explore")}{" "}
-            <Link href={localizedPath(locale, "/articles")}>
-              {t(locale, "article", "latest")}
-            </Link>
+            <Link href={localizedPath(locale, "/articles")}>{t(locale, "article", "latest")}</Link>
           </p>
         </main>
       </div>

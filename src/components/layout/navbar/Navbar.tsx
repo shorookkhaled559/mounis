@@ -32,7 +32,11 @@ export function Navbar({ locale, items }: NavbarProps) {
 
   return (
     <header className="site-header">
-      <div className="w-full max-w-[min(calc(100%-1.25rem),var(--page))] mx-auto min-h-[var(--header-h)] flex items-center gap-3 py-1 px-2.5 box-border md:gap-[1.15rem] md:px-4">
+      <div
+        className="site-header-inner"
+        data-locale={locale}
+        dir={locale === "ar" ? "rtl" : "ltr"}
+      >
         <NavbarBrand locale={locale} />
         <DesktopNav locale={locale} items={items} />
         <NavbarActions

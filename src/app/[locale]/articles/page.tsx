@@ -25,16 +25,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function ArticlesPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function ArticlesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
 
   return (
-    <div className="w-full max-w-[min(calc(100%-1.5rem),var(--page))] mx-auto px-3 py-6 pb-12 box-border">
+    <div className="mx-auto box-border w-full max-w-[min(calc(100%-1.5rem),var(--page))] px-3 py-6 pb-12">
       <Breadcrumbs
         locale={loc}
         items={[

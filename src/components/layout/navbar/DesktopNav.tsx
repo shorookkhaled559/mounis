@@ -14,12 +14,15 @@ export function DesktopNav({ locale, items }: DesktopNavProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:flex flex-1 items-center justify-start gap-x-5 gap-y-[0.15rem] min-w-0 overflow-auto scrollbar-none" aria-label={t(locale, "nav", "menu")}>
+    <nav
+      className="desktop-nav"
+      aria-label={t(locale, "nav", "menu")}
+    >
       {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}
-          className={`no-underline !text-white text-[0.925rem] font-medium whitespace-nowrap py-[0.4rem] border-b-2 border-transparent transition-all duration-200 hover:!text-white hover:border-b-[var(--accent)] ${pathname === item.href ? "!text-white border-b-[var(--accent)]" : ""}`}
+          className={`border-b-2 border-transparent py-[0.4rem] text-[0.925rem] font-medium whitespace-nowrap !text-white no-underline transition-all duration-200 hover:border-b-[var(--accent)] hover:!text-white ${pathname === item.href ? "border-b-[var(--accent)] !text-white" : ""}`}
         >
           {item.label}
         </Link>

@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: path === "" ? 1 : 0.6,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((code) => [code, `${siteConfig.url}/${code}${path}`]),
+            locales.map((code) => [code, `${siteConfig.url}/${code}${path}`])
           ),
         },
       });
@@ -44,10 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((code) => [
-              code,
-              `${siteConfig.url}/${code}/articles/${article.slug}`,
-            ]),
+            locales.map((code) => [code, `${siteConfig.url}/${code}/articles/${article.slug}`])
           ),
         },
       });

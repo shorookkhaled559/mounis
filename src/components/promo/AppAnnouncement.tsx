@@ -4,13 +4,18 @@ import type { Locale } from "@/types";
 
 export function AppAnnouncement({ locale }: { locale: Locale }) {
   return (
-    <section className="mt-8 p-[1.15rem_1rem] border border-[var(--line)] bg-gradient-to-[135deg] from-[var(--paper)] to-[var(--surface)] rounded-lg shadow-sm grid gap-[0.85rem] w-full box-border grid-cols-1 items-start sm:grid-cols-[auto_1fr] md:p-[1.35rem_1.4rem]" aria-labelledby="app-announce-title">
+    <section
+      className="bg-gradient-to-[135deg] mt-8 box-border grid w-full grid-cols-1 items-start gap-[0.85rem] rounded-lg border border-[var(--line)] from-[var(--paper)] to-[var(--surface)] p-[1.15rem_1rem] shadow-sm sm:grid-cols-[auto_1fr] md:p-[1.35rem_1.4rem]"
+      aria-labelledby="app-announce-title"
+    >
       <PhoneIcon className="size-6 text-[var(--forest)]" />
       <div>
         <h2 id="app-announce-title" className="m-0 text-xl font-bold text-[var(--ink)]">
           {t(locale, "app", "title")}
         </h2>
-        <p className="my-[0.35rem] mt-[0.35rem] mb-0 text-[var(--muted)]">{t(locale, "app", "body")}</p>
+        <p className="my-[0.35rem] mt-[0.35rem] mb-0 text-[var(--muted)]">
+          {t(locale, "app", "body")}
+        </p>
       </div>
     </section>
   );

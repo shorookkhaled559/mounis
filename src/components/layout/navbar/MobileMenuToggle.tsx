@@ -14,7 +14,7 @@ export function MobileMenuToggle({ locale, isOpen, onToggle }: MobileMenuToggleP
   return (
     <button
       type="button"
-      className="inline-flex lg:hidden items-center justify-center gap-[0.4rem] min-w-[2.35rem] min-h-[2.35rem] p-[0.35rem_0.45rem] border-0 bg-transparent text-white rounded-md cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-white/15 hover:text-white md:min-w-[2.65rem] md:min-h-[2.65rem] md:p-[0.4rem_0.55rem]"
+      className="flex min-h-[2.35rem] min-w-[2.35rem] flex-shrink-0 cursor-pointer items-center justify-center gap-[0.4rem] rounded-md border-0 bg-transparent p-[0.35rem_0.45rem] text-white transition-colors duration-200 hover:bg-white/15 hover:text-white md:hidden"
       aria-expanded={isOpen}
       aria-controls="mobile-nav"
       aria-label={isOpen ? t(locale, "nav", "close") : t(locale, "nav", "menu")}

@@ -37,7 +37,7 @@ export function localeMetadata({
 }: LocaleMetadataOptions): Metadata {
   const canonical = `${siteConfig.url}/${locale}${path}`;
   const languages = Object.fromEntries(
-    locales.map((code) => [code, `${siteConfig.url}/${code}${path}`]),
+    locales.map((code) => [code, `${siteConfig.url}/${code}${path}`])
   );
   languages["x-default"] = `${siteConfig.url}/${defaultLocale}${path}`;
 

@@ -28,12 +28,7 @@ export interface Article {
 }
 
 export type AdPlacement =
-  | "banner-top"
-  | "sidebar"
-  | "in-content"
-  | "between-sections"
-  | "mobile"
-  | "footer";
+  "banner-top" | "sidebar" | "in-content" | "between-sections" | "mobile" | "footer";
 
 export interface UnsContent {
   dateIso: string;

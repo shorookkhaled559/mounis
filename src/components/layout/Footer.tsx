@@ -12,8 +12,8 @@ export function Footer({ locale, items }: FooterProps) {
   const explore = mainNav(locale).filter((item) => !item.href.endsWith(`/${locale}`));
 
   return (
-    <footer className="border-t border-[var(--line)] bg-gradient-to-b from-[var(--surface)] to-[var(--surface-raised)] pt-8 pb-[1.6rem] mt-8 w-full overflow-x-hidden md:pt-10">
-      <div className="w-full max-w-[min(calc(100%-1.5rem),var(--page))] mx-auto px-3 grid gap-6 box-border grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] md:px-4">
+    <footer className="mt-8 w-full overflow-x-hidden border-t border-[var(--line)] bg-gradient-to-b from-[var(--surface)] to-[var(--surface-raised)] pt-8 pb-[1.6rem] md:pt-10 rtl:text-right">
+      <div className="mx-auto box-border grid w-full max-w-[min(calc(100%-1.5rem),var(--page))] grid-cols-1 gap-6 px-3 md:grid-cols-[1.3fr_1fr_1fr] md:px-4 rtl:text-right">
         <FooterBrand locale={locale} />
         <FooterNav
           title={locale === "ar" ? "استكشف" : "Explore"}

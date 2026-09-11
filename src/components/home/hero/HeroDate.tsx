@@ -6,9 +6,9 @@ interface HeroDateProps {
 
 export function HeroDate({ gregorian, hijri, isoDate }: HeroDateProps) {
   return (
-    <p className="flex flex-wrap items-center gap-[0.55rem] mt-4 mb-0 text-[var(--muted)] text-[0.92rem]">
+    <p className="hero-date mt-4 mb-0 flex flex-wrap items-center gap-[0.55rem] text-[0.92rem] text-[var(--muted)] rtl:flex-row-reverse">
       <time dateTime={isoDate}>{gregorian}</time>
-      <span className="w-[3px] h-[3px] rounded-full bg-[var(--muted)] inline-block" />
+      <span className="inline-block h-[3px] w-[3px] rounded-full bg-[var(--muted)]" />
       <span>{hijri}</span>
     </p>
   );

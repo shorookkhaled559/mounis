@@ -6,9 +6,13 @@ interface HeroToolsProps {
 
 export function HeroTools({ tools }: HeroToolsProps) {
   return (
-    <p className="flex flex-wrap gap-2 mt-[1.35rem] mb-0 md:gap-x-[0.85rem] md:gap-y-2.5">
+    <p className="hero-tools mt-[1.35rem] mb-0 flex flex-wrap gap-2 md:gap-x-[0.85rem] md:gap-y-2.5 rtl:flex-row-reverse rtl:justify-start">
       {tools.map((tool) => (
-        <Link key={tool.href} href={tool.href} className="no-underline text-[0.85rem] font-medium !text-white bg-[var(--primary)] py-2 px-[0.85rem] rounded-md transition-all duration-200 shadow-sm whitespace-nowrap hover:bg-[var(--primary-deep)] hover:shadow-md hover:-translate-y-px md:text-[0.9rem] md:py-[0.55rem] md:px-4 dark:!text-[var(--ink)]">
+        <Link
+          key={tool.href}
+          href={tool.href}
+          className="rounded-md bg-[var(--primary)] px-[0.85rem] py-2 text-[0.85rem] font-medium whitespace-nowrap !text-white no-underline shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-[var(--primary-deep)] hover:shadow-md md:px-4 md:py-[0.55rem] md:text-[0.9rem] dark:!text-[var(--ink)]"
+        >
           {tool.label}
         </Link>
       ))}

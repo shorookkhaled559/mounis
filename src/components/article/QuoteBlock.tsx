@@ -9,12 +9,14 @@ export function QuoteBlock({
   locale: Locale;
 }) {
   return (
-    <figure className="my-6 mx-0 p-4 border border-[var(--line)] border-s-4 border-s-[var(--accent)] bg-[var(--paper)] rounded-md shadow-sm grid gap-[0.55rem] w-full box-border break-words md:p-5 md:px-[1.35rem]">
+    <figure className="mx-0 my-6 box-border grid w-full gap-[0.55rem] rounded-md border border-s-4 border-[var(--line)] border-s-[var(--accent)] bg-[var(--paper)] p-4 break-words shadow-sm md:p-5 md:px-[1.35rem]">
       <QuoteIcon className="size-5 shrink-0 text-[var(--forest)]" />
       <blockquote className="m-0">
-        <p className="m-0 font-[var(--font-body-ar),serif] text-[1.15rem] leading-[2]">{quote.text[locale]}</p>
+        <p className="m-0 text-[1.15rem] leading-[2] font-[var(--font-body-ar),serif]">
+          {quote.text[locale]}
+        </p>
       </blockquote>
-      <figcaption className="text-[var(--muted)] text-[0.85rem]">{quote.source[locale]}</figcaption>
+      <figcaption className="text-[0.85rem] text-[var(--muted)]">{quote.source[locale]}</figcaption>
     </figure>
   );
 }

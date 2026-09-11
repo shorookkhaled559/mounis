@@ -9,13 +9,13 @@ module.exports = {
   useTabs: false,
   printWidth: 100,
   endOfLine: "lf",
-  
+
   // JSX/React specific
   jsxSingleQuote: false,
-  
+
   // Plugin support
   plugins: ["prettier-plugin-tailwindcss"],
-  
+
   // Override for specific file types
   overrides: [
     {

@@ -20,15 +20,11 @@ export function NavbarActions({
   onMobileMenuToggle,
 }: NavbarActionsProps) {
   return (
-    <div className="ms-auto flex items-center gap-[0.15rem] flex-shrink-0 md:gap-[0.2rem]">
+    <div className="header-actions">
       <LanguageSwitcher locale={locale} pathname={pathname} />
       <ThemeToggle locale={locale} />
       <SearchDialog locale={locale} />
-      <MobileMenuToggle
-        locale={locale}
-        isOpen={isMobileMenuOpen}
-        onToggle={onMobileMenuToggle}
-      />
+      <MobileMenuToggle locale={locale} isOpen={isMobileMenuOpen} onToggle={onMobileMenuToggle} />
     </div>
   );
 }

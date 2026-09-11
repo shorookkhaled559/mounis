@@ -5,8 +5,8 @@ import type { Locale } from "@/types";
 
 export function Sidebar({ locale }: { locale: Locale }) {
   return (
-    <aside className="w-full order-first lg:order-none">
-      <div className="lg:sticky lg:top-[calc(var(--header-h)+1rem)] grid gap-4">
+    <aside className="order-first w-full lg:order-none">
+      <div className="grid gap-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)]">
         <UnsWidget locale={locale} content={unsToday} />
         <AdSlot placement="sidebar" locale={locale} />
       </div>

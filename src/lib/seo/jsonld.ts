@@ -55,10 +55,7 @@ export function articleJsonLd(article: Article, locale: Locale) {
   };
 }
 
-export function breadcrumbJsonLd(
-  locale: Locale,
-  items: { name: string; path: string }[],
-) {
+export function breadcrumbJsonLd(locale: Locale, items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
